@@ -4,6 +4,13 @@ import { useQuery } from "@tanstack/react-query";
 import "leaflet/dist/leaflet.css";
 import { fetchCountryData } from "../api/covidAPI";
 import { CountryData } from "../schema/country";
+import L from 'leaflet';
+
+L.Icon.Default.mergeOptions({
+  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+});
 
 const Map: React.FC = () => {
   const { data, isLoading, error } = useQuery<CountryData[]>({
