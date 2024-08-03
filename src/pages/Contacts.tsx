@@ -68,7 +68,7 @@ const Contacts: React.FC = () => {
         />
         <button
           onClick={handleAddContact}
-          className="ml-4 py-2 px-4 bg-blue-500 text-white rounded-lg"
+          className="lg:ml-4 mt-2 w-full lg:w-48 py-2 lg:px-4 bg-blue-500 text-white rounded-lg"
         >
           Add Contact
         </button>
