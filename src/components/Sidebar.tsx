@@ -12,7 +12,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
   const navigate = useNavigate();
 
-  const handleItemClick = (text: string, path: string) => {
+  const handleItemClick = (path: string) => {
     navigate(path);
   };
 
@@ -42,7 +42,7 @@ const Sidebar = () => {
                 key={item.text}
                 icon={item.icon}
                 text={item.text}
-                onClick={() => handleItemClick(item.text, item.path)}
+                onClick={() => handleItemClick(item.path)}
                 path={item.path}
                 isOpen={isOpen}
               />
