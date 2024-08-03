@@ -17,6 +17,10 @@ const ContactModal: React.FC<ContactModalProps> = ({
       setFirstName(contact.firstName);
       setLastName(contact.lastName);
       setIsActive(contact.isActive);
+    } else {
+      setFirstName("");
+      setLastName("");
+      setIsActive(true);
     }
   }, [contact]);
 

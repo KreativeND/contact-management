@@ -12,3 +12,9 @@ export interface ContactModalProps {
   onSaveContact: (contact: Contact) => void;
   contact: Contact | null;
 }
+
+export interface ContactCardProps {
+  contact: Contact;
+  onEdit: (contact: Contact) => void;
+  onDelete: (id: number) => void;
+}

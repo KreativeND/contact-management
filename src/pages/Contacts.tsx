@@ -23,15 +23,6 @@ const Contacts: React.FC = () => {
       contact.lastName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const toggleStatus = (id: number) => {
-    dispatch(
-      updateContact({
-        ...contacts.find((contact) => contact.id === id)!,
-        isActive: !contacts.find((contact) => contact.id === id)!.isActive,
-      })
-    );
-  };
-
   const handleDeleteContact = (id: number) => {
     dispatch(deleteContact(id));
   };
@@ -82,7 +73,6 @@ const Contacts: React.FC = () => {
               contact={contact}
               onEdit={handleEditContact}
               onDelete={handleDeleteContact}
-              onToggleStatus={toggleStatus}
             />
           ))
         ) : (
